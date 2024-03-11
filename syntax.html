@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>JavaScript Tutorial - Basic JavaScript Syntax</title>
+</head>
+<body>
+    <header>
+        <h1>JavaScript Tutorial</h1>
+        <nav>
+            <a href="Intro.html">Introduction</a>
+            <a href="events.html">Events</a>
+            <a href="jquery.html">JQuery</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>Basic JavaScript Syntax</h1>
+
+            <p>The brief overview of the fundamentals of JavaScript syntax and structures will include variables, conditional statements, arrays & loops, maps, built-in functions, and user-defined functions. After each topic, you will be able to try out or practice what has been discussed.</p>
+            
+            <div class="variables">
+            <h2>Variables</h2>
+            <p>In programming, a variable is a container or a named storage location that holds a value. It's like a labeled box where you can store information and give it a name. This information could be a number, a piece of text, or any other type of data.</p>
+
+            <h3>Example: Assigning Values to Variables</h3>
+            <p>Consider the following JavaScript code:</p>
+            <code>
+                let greeting = "Hello";<br>
+                // let means the variable can be reassigned<br>
+                let question = "How are you?";<br>
+                // const means the variable cannot be reassigned
+            </code>
+
+            <p>Here:</p>
+            <ul>
+                <li><code>let greeting = "Hello";</code>: This line declares a variable named <code>greeting</code> and assigns the value <code>"Hello"</code> to it.</li>
+                <li><code>// let means the variable can be reassigned;</code>: The <code>//</code> indicates a comment. In JavaScript, comments are for adding explanations and are ignored by the computer.</li>
+                <li><code>let question = "How are you?";</code>: This line declares another variable named <code>question</code> and assigns the value <code>"How are you?"</code> to it.</li>
+                <li><code>// const means the variable cannot be reassigned;</code>: This comment explains that using <code>const</code> instead of <code>let</code> would mean the variable cannot be reassigned.</li>
+            </ul>
+
+            <p>Comments are helpful for explaining your code to others (and to your future self!).</p>
+        </div>
+        <div class="C-Statements">
+            <h2>Conditional Statements</h2>
+            <p>Conditional statements in programming allow you to make decisions based on certain conditions. These conditions determine the flow of the program, allowing it to execute different blocks of code depending on whether the conditions are true or false.</p>
+
+            <p>In JavaScript, the <code>if</code>, <code>else if</code>, and <code>else</code> statements are commonly used for creating conditional logic. The basic syntax is:</p>
+            <code>
+                if (condition1) {<br>
+                    // Code to execute if condition1 is true<br>
+                } else if (condition2) {<br>
+                    // Code to execute if condition2 is true<br>
+                } else {<br>
+                    // Code to execute if none of the conditions are true<br>
+                }
+            </code>
+
+            <p>Here, <code>condition1</code>, <code>condition2</code>, and so on, are expressions that evaluate to either <code>true</code> or <code>false</code>.</p>
+
+            <h3>Example: Using Conditional Statements</h3>
+            <code>
+                if (greeting === "Hello" &amp;&amp; question === "What's the time?") {<br>
+                    console.log("It is 10 o'clock.");<br>
+                } else if (greeting === "Hello" || question === "What is the weather like tomorrow?") {<br>
+                    console.log("It will be sunny tomorrow.");<br>
+                } else {<br>
+                    console.log("I don't understand the question.");<br>
+                }
+            </code>
+        </div>
+            <div class="Arrays-Loops">
+            <h2>Arrays and Loops</h2>
+            <p>In programming, an array is like a list of items, and loops are used to go through each item in the list.</p>
+
+            <h3>Example: Reversing and Displaying an Array</h3>
+            <code>
+                let classMarks = [62, 88, 90, 70, 69, 85];<br>
+                for (let i = classMarks.length - 1; i >= 0; i--) {<br>
+                &emsp; console.log(classMarks[i]);<br>
+                }<br>
+                <br>
+                classMarks.forEach(function (number) {<br>
+                &emsp; console.log(number + 2);<br>
+                });<br>
+                <br>
+                let counter = 0;<br>
+                let j = 0;<br>
+                while (counter <= 4) {<br>
+                &emsp; console.log(classMarks[j]);<br>
+                &emsp; counter++;<br>
+                &emsp; j++;<br>
+                }
+            </code>
+
+            <p>This code demonstrates different ways to iterate through an array and display its elements:</p>
+            
+                <li>The first <code>for</code> loop reverses the array and outputs each element.</li>
+                <li>The <code>forEach</code> method adds 2 to each element and outputs the result.</li>
+                <li>The <code>while</code> loop outputs the first 5 elements of the array.</li>
+            
+
+            <p>There are more array methods that can be used, see below:</p><br>
+            <ul>
+                <li><strong>indexOf() </strong>- Searches for the given elements and returns its position.</li>
+                <li><strong>includes() </strong>- Checks if an array containes a given element.</li>
+                <li><strong>remove() </strong>- Removes an item from the list.</li>
+                <li><strong>pop()</strong>- Removes the last element in the array</li>
+                <li><strong>push()</strong>- Adds an element to the end of the array and returns the new length</li>
+                <li><strong>shift()</strong>- Removes the first element in the array</li>
+                <li><strong>sort()</strong>- Sorts elements in the array in ascending order</li>
+                <li><strong>splice()</strong>- Adds or removes elements in an array</li>
+                <li><strong>reverse()</strong>- Reverses the order of elements in the array</li>
+            </ul>
+        </div>
+
+
+        <div class="Maps">
+            <h2>Maps</h2>
+            <p>Maps are key-value pairs where each key must be unique, and it can hold any data type as a key or value. Let's explore some methods available for Maps:</p>
+
+            <code>
+                let teachers = new Map();<br>
+                teachers.set("grade1", "Mrs. Johnson");<br>
+                teachers.set("grade2", "Mr. Bennett");<br>
+                
+                // Check if a key exists in the map<br>
+                console.log(teachers.has("grade1")); // Output: true<br>
+                
+                // Get the value associated with a key<br>
+                console.log(teachers.get("grade2")); // Output: Mr. Bennett<br>
+                
+                // Delete a key-value pair from the map<br>
+                teachers.delete("grade1");<br>
+                
+                // Display keys<br>
+                for (let key of teachers.keys()) {<br>
+                &emsp; console.log(key);<br>
+                }<br>
+                
+                // Display values<br>
+                for (let value of teachers.values()) {<br>
+                &emsp; console.log(value);<br>
+                }<br>
+                
+                // Display key-value pairs<br>
+                for (let [key, value] of teachers.entries()) {<br>
+                &emsp; console.log(`The ${key} teacher is ${value}.`);<br>
+                }<br>
+                
+                // Clear all entries from the map<br>
+                teachers.clear();<br>
+                </code>
+
+                <p>The provided code showcases various methods to work with a Map and understand its key-value pairs:</p>
+                <ul>
+                    <li>- The <code>has()</code> method checks if a specific key exists in the map, returning a boolean result.</li>
+                    <li>- The <code>get()</code> method retrieves the value associated with a given key in the map.</li>
+                    <li>- The <code>delete()</code> method removes a key-value pair from the map based on the provided key.</li>
+                    <li>- The <code>clear()</code> method removes all key-value pairs, essentially clearing the entire map.</li>
+                </ul>
+        </div>
+        
+        <div class="functions">
+            <h2>User-Defined Functions: doubleNumber()</h2>
+                <p>In programming, user-defined functions allow you to create reusable blocks of code with a specific purpose. These functions take input parameters, perform operations, and return a result. Let's look at an example function called <code>doubleNumber</code>:</p>
+
+                <code>
+                    function doubleNumber(number) {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;return number * 2;<br>
+                    }<br>
+                    console.log(doubleNumber(10));<br>
+                    // Outputs 20
+                </code>
+
+                <p>Here's a breakdown:</p>
+                    <ul>
+                        <li><code>function doubleNumber(number) {</code>: This line declares a function named <code>doubleNumber</code> that takes one parameter, <code>number</code>.</li>
+                        <li><code>&nbsp;&nbsp;&nbsp;&nbsp;return number * 2;</code>: Inside the function, it multiplies the input <code>number</code> by 2 and returns the result.</li>
+                        <li><code>}</code>: Closes the function block.</li>
+                        <li><code>console.log(doubleNumber(10));</code>: Calls the <code>doubleNumber</code> function with the argument <code>10</code> and prints the result to the console.</li>
+                        <li><code>// Outputs 20</code>: This comment indicates that the console output will be 20.</li>
+                    </ul>
+
+                <p>When you run this code, it will output <code>20</code> because <code>doubleNumber(10)</code> returns <code>10 * 2</code>, which is <code>20</code>.</p>
+                
+                
+                <p>In JavaScript, there are several built-in functions that perform specific tasks. Here are some commonly used string and array functions:</p>
+
+                    <ul>
+                        <li><strong>charAt()</strong> - Returns the character in a string at the given index.</li>
+                        <li><strong>indexOf()</strong> - Returns the index of the first occurrence of a character in a string.</li>
+                        <li><strong>charCodeAt()</strong> - Returns the ASCII number of the character at the given index in a string.</li>
+                        <li><strong>fromCharCode()</strong> - Returns the character of the given ASCII number.</li>
+                        <li><strong>replace()</strong> - Replaces a matched substring with a new substring in a string.</li>
+                        <li><strong>split()</strong> - Splits a string into an array of substrings based on a specified delimiter.</li>
+                        <li><strong>toUpperCase()</strong> - Returns the given string in all uppercase letters.</li>
+                        <li><strong>toLowerCase()</strong> - Returns the given string in all lowercase letters.</li>
+                        <li><strong>join()</strong> - Joins all elements of an array into a single string.</li>
+                        <li><strong>pow()</strong> - Returns the base to the exponent power.</li>
+                        <li><strong>min()</strong> - Returns the smallest value among elements.</li>
+                        <li><strong>max()</strong> - Returns the largest value among elements.</li>
+                        <li><strong>round()</strong> - Returns a number rounded to the nearest integer.</li>
+                    </ul>
+
+                    <p>These functions provide essential functionality for manipulating strings and arrays in various ways.</p><br>
+
+        </div>
+    </section>
+    <section>
+        <div class="code-editor-container">
+            <div class="code-input">
+                <textarea id="codeInput" placeholder="Type your JavaScript code here..." oninput="resizeTextarea()"></textarea>
+                <button onclick="runCode()">Run Code</button>
+            </div>
+            <div class="code-output" id="output"></div>
+        </div>
+        <script src="syntax.js"></script>
+    </section>
+
+                
+        
+    </main>
+
+
+   
+</body>
+</html>

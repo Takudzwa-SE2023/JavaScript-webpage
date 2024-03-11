@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>JavaScript Tutorial - JavaScript JQuery</title>
+</head>
+<body>
+    <header>
+        <h1>JavaScript Tutorial</h1>
+        <nav>
+            <a href="Intro.html">Introduction</a>
+            <a href="syntax.html">Basic JavaScript Syntax </a>
+            <a href="events.html">Events</a>
+        </nav>
+    </header>
+<main>
+    <section>
+        <div class="jquery">
+        <h2>JavaScript JQuery</h2>
+        <p>  jQuery is a popular JavaScript library that simplifies the process of creating dynamic and interactive web pages.
+             It is designed to make things easier for developers by providing a concise and convenient way to manipulate HTML 
+             documents, handle events, and perform various common tasks.</p>
+
+        <p> Take this for example:Imagine a web page as a digital document or a virtual interactive sheet of paper. This sheet 
+            contains various elements like text, images, buttons, and forms. To make this sheet more dynamic and responsive, 
+            we often need to use JavaScript, which is a programming language for web browsers.
+            Now, imagine JavaScript as a set of tools you can use to interact with this virtual sheet - changing text,
+            hiding or showing elements, or responding to button clicks. While JavaScript is powerful, it can be a bit verbose
+            and require writing many lines of code for common tasks.
+            Here's where jQuery comes in. jQuery acts like a helpful assistant that simplifies the process. It provides a collection
+            of pre-built functions that allow you to accomplish common tasks with just a few lines of code. It's like having a set of 
+            shortcuts or handy tools that make your work more efficient.
+            For example, if you want to hide a specific element with JavaScript, you might need several lines of code. With jQuery, 
+            you can do it in just one line: 
+        </p>
+        </div>
+        <p>
+            Here are a few JQuery methods
+        </p>
+    <div class="functions">
+    <h2> Functions</h2>
+    <p>Functions in jQuery are like mini-programs that can do specific tasks. They are blocks of code designed to perform a particular job.<br>
+       Below is an exmaple:
+    </p>
+    <code>
+        $(<br>
+    function() {<br>
+        // jQuery events and effects go here<br>
+    }<br>
+
+);
+    </code>
+    <p>Here's a breakdown:</p>
+        <ul>
+            <li><code>$(function() {</code>: This line uses jQuery to define a function that will be executed when the document is fully loaded.</li>
+            <li><code>&emsp;// jQuery events and effects go here</code>: This is a comment indicating that the jQuery events and effects should be written in this section.</li>
+            <li><code>&emsp;// For example, let's hide an element with class "yellow" when a button is clicked</code>: This is a comment providing an example of what the jQuery code inside will do.</li>
+            <li><code>&emsp;$("button").click(function() {</code>: This line selects the <code>&lt;button&gt;</code> element and attaches a function to be executed when it is clicked.</li>
+            <li><code>&emsp;&emsp;$(".yellow").hide();</code>: Inside the click function, this line selects all elements with the class "yellow" and hides them.</li>
+            <li><code>&emsp;});</code>: Closes the click function block.</li>
+    
+        </ul>
+    </div>
+    <div class="selectors">
+        <h2>Selectors</h2>
+        <p>Selectors in jQuery are used to target and manipulate HTML elements on a web page.<br>
+            Here are a few examples:
+        </p>
+        <ul>
+            <li><strong>Element Selector</strong>-<code>$("h1")</code> Selects all <code>h1</code> elements on the page.</li>
+            <li><strong>ID Selector</strong><code>$("#mainHeading")</code>  Selects the element with the ID <code>"mainHeading".</code></li>
+            <li><strong>Class Selector</strong><code>$(".yellow")</code>Selects all elements with the class <code>"yellow".</code></li>
+            <li><strong>Universal Selector</strong><code>$("*")</code>Selects all HTML elements on the page.</li>
+            <li><strong>This Selector:</strong><code>$(this)</code> Selects the current HTML element within a jQuery event handle</li>
+            
+        </ul>
+    </div>
+    <div class="appending">
+        <h2>Creating and appending elements</h2>
+        <p>This involves dynamically generating HTML elements and adding them to the DOM (Document Object Model). This process is commonly
+           used to build or modify the structure of a web page dynamically
+        </p>
+
+        <code>
+            // Creating a new paragraph element
+            let newParagraph = $("<p></p>").text("This is a new paragraph.");
+            
+            // Appending the new paragraph to the body
+            $("body").append(newParagraph);
+        </code>
+            
+            <h3>Here's a breakdown:</h3>
+            <ul>
+                <li><code>// Creating a new paragraph element</code>: This line initializes a new jQuery object representing a paragraph element (<code>&lt;p&gt;</code>) with an empty text content.</li>
+                <li><code>let newParagraph = $("<p></p>").text("This is a new paragraph.");</code>: This line creates a new paragraph element and sets its text content to "This is a new paragraph."</li>
+                <li><code>// Appending the new paragraph to the body</code>: This line appends the newly created paragraph element to the end of the <code>&lt;body&gt;</code> element in the HTML document.</li>
+                <li><code>$("body").append(newParagraph);</code>: This line uses the jQuery <code>append()</code> method to add the new paragraph to the end of the <code>&lt;body&gt;</code> element.</li>
+            </ul>
+    
+            <h3>Common built-in functions in jQuery incude:
+
+            </h3>
+                <ul>
+                    <li><strong>after() - </strong>Inserts content after the selected HTML element.</li>
+                    <li><strong>append() - </strong>Inserts content at the end of the selected element.</li>
+                    <li><strong>before() - </strong>Inserts content after the selected HTML element.</li>
+                    <li><strong>empty() - </strong>Removes the child elements from the selected element but not the element itself.</li>
+                    <li><strong>prepend() - </strong>Inserts content at the beginning of the selected element.</li>
+                    <li><strong>text() - </strong>Sets or returns the text content of the selected element.</li>
+                    <li><strong>val() - </strong>Sets or returns the value of the form field.</li>
+                    <li><strong>remove() - </strong>removes the selected element, including its child element.</li>
+                </ul>
+            </p>
+    </div>
+    <div class="EventsandEffects">
+        <h2>Events and Effects</h2>
+        <p>In jQuery, events and effects are two important concepts that facilitate interactive and dynamic behavior in web pages.</p>
+        <code>
+            $("p").click(function(){
+                $("This").hide('slow');
+            })
+        </code>
+        <p>Here's a breakdown:</p>
+        <ul>
+            <li><code>$("p")</code>: This line selects all <code>&lt;p&gt;</code> elements in the HTML document.</li>
+            <li><code>.click(function() { ... })</code>: This line attaches a click event handler to the selected <code>&lt;p&gt;</code> elements. The function inside the parentheses will be executed when any <code>&lt;p&gt;</code> element is clicked.</li>
+            <li><code>$("This")</code>: This line attempts to select elements with the tag name "This." However, if "This" is meant to be a class, it should be written as <code>$(".This")</code>, and if it's an ID, it should be written as <code>$("#This")</code>.</li>
+            <li><code>.hide('slow')</code>: This line hides the selected element with a slow animation. The string <code>'slow'</code> indicates a gradual hiding effect.</li>
+        </ul>
+        <h3>Common events in jQuery</h3>
+        <ul>
+            <li>Mouse events: Click, Double click, Mouse enter.</li>
+            <li>Keyboard events: Key press, Keydown, Key up</li>
+            <li>Form events: Submit, Change, Blur</li>
+        </ul>
+
+    </div>
+    </section>
+    <section>
+    <div class="code-editor-container">
+        <div class="code-input">
+            <textarea id="codeInput" placeholder="Type your JavaScript code here..." oninput="resizeTextarea()"></textarea>
+            <button onclick="runCode()">Run Code</button>
+        </div>
+        <div class="code-output" id="output"></div>
+    </div>
+    <script src="jquery.js"></script>
+   
+
+
+    </section>
+</main>
+
+   
+</body>
+</html>

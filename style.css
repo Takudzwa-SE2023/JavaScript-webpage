@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding-bottom: 60px; /* Adjusted padding to make space for the code editor container */
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+main {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+    color: #666;
+}
+
+.variables {
+    background-color: #7FFFD4; /* Aqua */
+}
+
+.C-Statements {
+    background-color: #98FB98; /* Pale Green */
+}
+
+.Arrays-Loops {
+    background-color: #5F9EA0; /* Cadet Blue */
+}
+
+.Maps {
+    background-color: #556B2F; /* Dark Olive Green */
+}
+
+.functions {
+    background-color: #228B22; /* Forest Green */
+}
+
+.events {
+    background-color: #7FFFD4; /* Aqua */
+}
+
+.jquery {
+    background-color: #98FB98; /* Pale Green */
+}
+
+.functions {
+    background-color: #5F9EA0; /* Cadet Blue */
+}
+
+.selectors {
+    background-color: #556B2F; /* Dark Olive Green */
+}
+
+.appending {
+    background-color: #628c19; /* Dark Olive Green */
+}
+
+.EventsandEffects {
+    background-color: #64714d; /* Dark Olive Green */
+}
+
+/* Updated code editor container styles */
+.code-editor-container {
+    width: 100%;
+    box-sizing: border-box;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+}
+
+.code-input {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+textarea {
+    width: 100%;
+    resize: vertical;
+    min-height: 100px;
+}
+
+.code-output {
+    width: 100%;
+    border: none;
+    padding: 10px;
+    box-sizing: border-box;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>JavaScript Tutorial - JavaScript Events</title>
+</head>
+<body>
+    <header>
+        <h1>JavaScript Tutorial</h1>
+        <nav>
+            <a href="Intro.html">Introduction</a>
+            <a href="syntax.html">Basic JavaScript Syntax </a>
+            <a href="jquery.html">JQuery</a>
+        </nav>
+    </header>
+<main>
+    <section>
+        <div class="events">
+        <h2>JavaScript Events</h2>
+        <p>Events in JavaScript allow you to respond to user actions and interactions with your web page. Here are some common events and how they can be utilized:</p>
+
+        <ul>
+            <li><strong>onchange:</strong> Some HTML element has been modified.</li>
+            <li><strong>onclick:</strong> An HTML element has been clicked.</li>
+            <li><strong>onmouseover:</strong> The mouse pointer is over an HTML element.</li>
+            <li><strong>onmouseout:</strong> The mouse pointer leaves an HTML element.</li>
+            <li><strong>onmouseup:</strong> A mouse button is released over an HTML element.</li>
+            <li><strong>onkeydown:</strong> A key on the keyboard is pressed down.</li>
+            <li><strong>onload:</strong> The HTML page has finished loading.</li>
+        </ul>
+
+        <h2>Example: User-Defined Functions and Events</h2>
+
+
+        <code>
+            function closeDoc() {<br>
+                &emsp; alert("You are closing this page!");<br>
+                &emsp; window.close();<br>
+            } </code><br>
+            
+            <p>Here's a breakdown:</p>
+            <ul>
+                <li><code>function closeDoc() {</code>: This line declares a function named <code>closeDoc</code>.</li>
+                <li><code>&emsp; alert("You are closing this page!");</code>: Inside the function, an <code>alert</code> is used to display a pop-up with the message "You are closing this page!" when the function is called.</li>
+                <li><code>&emsp; window.close();</code>: Following the alert, the <code>window.close()</code> statement attempts to close the current browser window or tab.</li>
+                <li><code>}</code>: Closes the function block.</li>
+            </ul>
+        </div>
+        <section>
+        <div class="code-editor-container">
+            <div class="code-input">
+                <textarea id="codeInput" placeholder="Type your JavaScript code here..." oninput="resizeTextarea()"></textarea>
+                <button onclick="runCode()">Run Code</button>
+            </div>
+            <div class="code-output" id="output"></div>
+        </div>
+        <script src="events.js"></script>
+        
+    </section>
+</main>
+   
+   
+</body>
+</html>
